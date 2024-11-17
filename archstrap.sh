@@ -9,5 +9,8 @@ for package in $(cat swayreq); do
     sleep 1
 done
 
-# Copy config file to config directory
-cp -r ./config $HOME/.config/sway
+# Move sway config to config folder
+git clone https://github.com/darkard2003/swayconfig.git ~/.config/sway
+
+# Move waybar config to config folder
+git clone https://github.com/darkard2003/waybarconfig.git ~/.config/waybar
