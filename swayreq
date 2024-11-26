@@ -1,4 +1,4 @@
-sway
+swayfx
 swaybg
 swaylock
 swayidle
@@ -11,4 +11,8 @@ pulseaudio
 grim
 slurp
 xorg-xwayland
+xdg-desktop-portal-wlr
+xdg-desktop-portal-gtk
+xdg-desktop-portal
+xdg-desktop-utils
 ttf-jetbrains-mono-nerd
