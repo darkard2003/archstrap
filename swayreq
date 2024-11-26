@@ -10,6 +10,7 @@ brightnessctl
 pulseaudio
 grim
 slurp
+playerctl
 xorg-xwayland
 xdg-desktop-portal-wlr
 xdg-desktop-portal-gtk
