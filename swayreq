@@ -15,5 +15,6 @@ xorg-xwayland
 xdg-desktop-portal-wlr
 xdg-desktop-portal-gtk
 xdg-desktop-portal
-xdg-desktop-utils
+xdg-utils
 ttf-jetbrains-mono-nerd
+noto-fonts

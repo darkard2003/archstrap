@@ -6,7 +6,7 @@ set -e
 function install_package {
     echo "Installing $1"
     if ! [ command -v $1 &> /dev/null ]; then
-        sudo pacman -S $1 --noconfirm
+        yay -S $1
         echo "Installed $1"
     else
         echo "$1 is already installed"
@@ -39,6 +39,16 @@ function clone_repo {
     fi
 }
 
+if ! [ command -v yay &> /dev/null ]; then
+    echo "Setting up AUR"
+    sudo pacman -S --needed git base-devel
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si
+    cd ..
+    echo "Installed yay"
+fi
+
 # Install packages in swayreq file
 for package in $(cat swayreq); do
     install_package $package
@@ -51,6 +61,9 @@ clone_repo ~/.config/sway https://github.com/darkard2003/swayconfig.git
 # Move waybar config to config folder
 echo "Moving waybar config to config folder"
 clone_repo ~/.config/waybar https://github.com/darkard2003/waybarconfig.git
+
+# Move swaync config to config foler
+clone_repo ~/.config/swaync https://github.com/darkard2003/archstrap.git
 
 if ! [ command -v nvim &> /dev/null ]; then
     echo "Installing nvim"
@@ -65,3 +78,5 @@ clone_repo ~/.config/nvim https://github.com/darkard2003/nvim_config_darkchoclat
 # Move kitty config to config folder
 echo "Moving kitty config to config folder"
 clone_repo ~/.config/kitty https://github.com/darkard2003/kittyconfig.git
+
+
