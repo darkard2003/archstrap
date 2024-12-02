@@ -4,7 +4,7 @@ swaylock
 swayidle
 swaync
 waybar
-wmenu
+wofi
 kitty
 brightnessctl
 pulseaudio
@@ -13,8 +13,10 @@ slurp
 playerctl
 xorg-xwayland
 xdg-desktop-portal-wlr
-xdg-desktop-portal-gtk
 xdg-desktop-portal
 xdg-utils
+xdg-user-dirs
 ttf-jetbrains-mono-nerd
 noto-fonts
+power-profiles-daemon
+nwg-look
